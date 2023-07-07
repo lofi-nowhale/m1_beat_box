@@ -15,6 +15,13 @@ RSpec.describe Node do
 
             expect(node.data).to eq("plop")
         end
+    end
 
+    describe "#next_node" do
+        it "can add the next node" do
+            node = Node.new("plop")
+
+            expect(node.next_node).to eq(nil)
+        end
     end
 end
