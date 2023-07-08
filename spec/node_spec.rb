@@ -10,18 +10,21 @@ RSpec.describe Node do
         end
     end
     describe "#data" do
-        it "can has readable attributes" do
+        it "has readable attributes" do
             node = Node.new("plop")
 
             expect(node.data).to eq("plop")
         end
     end
 
-    describe "#next_node" do
-        it "can add the next node" do
-            node = Node.new("plop")
 
+    describe "#next_node" do
+        it "can read and return the value of next node" do
+            node = Node.new("plop")
+            
             expect(node.next_node).to eq(nil)
         end
     end
+
+    
 end
