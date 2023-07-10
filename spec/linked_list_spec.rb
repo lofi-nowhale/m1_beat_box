@@ -89,4 +89,16 @@ RSpec.describe LinkedList do
         end
     end
 
+
+    # want to set the new node as @head 
+    describe "#prepend" do 
+        it "can add a node to the beginning of the list" do
+            list = LinkedList.new
+
+            list.prepend("dop")
+
+            expect(list.head.data).to eq("dop")
+        end
+    end
+
 end
