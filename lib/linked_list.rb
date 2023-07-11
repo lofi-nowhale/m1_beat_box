@@ -62,4 +62,22 @@ class LinkedList
         string.chop
 
     end
+
+    # method to add a node to the beginning of the list - this node will become our head! 
+    def prepend(data)
+        new_node = Node.new(data)
+        current_node = @head
+
+        if @head == nil
+            @head = new_node
+
+        else
+            current_node = new_node
+            
+            current_node.next_node = @head
+
+            @head = current_node
+
+        end
+    end
 end
