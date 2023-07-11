@@ -33,7 +33,7 @@ class LinkedList
     
     end
 
-    # create a count method to count the number of nodes in the list. 
+    # count method will count the number of nodes in the list
 
     # We are starting our count at 0 and setting our current node as the head or the first node. The while loops functions to add 1 to the count while current_node does not == nil. Once we hit a current_node that = nil, we exit the loop and we return count. 
 
@@ -64,7 +64,7 @@ class LinkedList
 
     end
 
-    # method to add a node to the beginning of the list - this node will become our head! 
+    # prepend method will add a node to the beginning of the list - this node will become our head! 
     def prepend(data)
         new_node = Node.new(data)
         current_node = @head
