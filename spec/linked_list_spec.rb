@@ -95,9 +95,13 @@ RSpec.describe LinkedList do
         it "can add a node to the beginning of the list" do
             list = LinkedList.new
 
+            list.append("plop")
+            list.append("suu")
             list.prepend("dop")
 
             expect(list.head.data).to eq("dop")
+            expect(list.to_string).to eq("dop plop suu")
+
         end
     end
 
