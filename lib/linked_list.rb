@@ -5,6 +5,7 @@ class LinkedList
     def initialize(head = nil)
         @head
         @next_node
+        @index
     end
 
     # append method will look to see if there is a head assigned, if there is no head then we will set head as new_node which creates a new node that we can pass data into. 
@@ -59,7 +60,45 @@ class LinkedList
             string << current_node.data + " "
             current_node = current_node.next_node
         end
-        string.chop
+        string.strip
+
+    end
+
+    # method to add a node to the beginning of the list - this node will become our head! 
+    def prepend(data)
+        new_node = Node.new(data)
+        current_node = @head
+
+        if @head == nil
+            @head = new_node
+
+        else
+            current_node = new_node
+            
+            current_node.next_node = @head
+
+            @head = current_node
+
+        end
+    end
+
+    def insert(index,data)
+        new_node = Node.new(data)
+        count = 1
+        current_node = @head
+        
+         if @head == nil 
+             @head = new_node
+
+         else 
+            while count != index
+                count += 1
+            
+                current_node = current_node.next_node
+            end
+             new_node.next_node = current_node.next_node 
+             current_node.next_node = new_node
+        end
 
     end
 end
